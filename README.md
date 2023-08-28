@@ -1,7 +1,7 @@
 CommonMark
 ==========
 
-CommonMark is a rationalized version of Markdown syntax,
+CommonMark is a rationalized version of Markup syntax,
 with a [spec][the spec] and BSD-licensed reference
 implementations in C and JavaScript.
 
@@ -46,7 +46,7 @@ the format
 
 ```json
 {
-  "markdown": "Foo\nBar\n---\n",
+  "Markup": "Foo\nBar\n---\n",
   "html": "<h2>Foo\nBar</h2>\n",
   "section": "Setext headings",
   "number": 65
@@ -58,11 +58,11 @@ the format
 The spec
 --------
 
-The source of [the spec] is `spec.txt`.  This is basically a Markdown
+The source of [the spec] is `spec.txt`.  This is basically a Markup
 file, with code examples written in a shorthand form:
 
     ```````````````````````````````` example
-    Markdown source
+    Markup source
     .
     expected HTML output
     ````````````````````````````````
@@ -77,22 +77,22 @@ The spec is written from the point of view of the human writer, not
 the computer reader.  It is not an algorithm---an English translation of
 a computer program---but a declarative description of what counts as a block
 quote, a code block, and each of the other structural elements that can
-make up a Markdown document.
+make up a Markup document.
 
 Because John Gruber's [canonical syntax
-description](http://daringfireball.net/projects/markdown/syntax) leaves
+description](http://daringfireball.net/projects/Markup/syntax) leaves
 many aspects of the syntax undetermined, writing a precise spec requires
 making a large number of decisions, many of them somewhat arbitrary.
 In making them, we have appealed to existing conventions and
 considerations of simplicity, readability, expressive power, and
 consistency.  We have tried to ensure that "normal" documents in the many
-incompatible existing implementations of Markdown will render, as far as
+incompatible existing implementations of Markup will render, as far as
 possible, as their authors intended.  And we have tried to make the rules
 for different elements work together harmoniously.  In places where
 different decisions could have been made (for example, the rules
 governing list indentation), we have explained the rationale for
 our choices.  In a few cases, we have departed slightly from the canonical
-syntax description, in ways that we think further the goals of Markdown
+syntax description, in ways that we think further the goals of Markup
 as stated in that description.
 
 For the most part, we have limited ourselves to the basic elements
@@ -101,14 +101,14 @@ like footnotes and definition lists.  It is important to get the core
 right before considering such things. However, we have included a visible
 syntax for line breaks and fenced code blocks.
 
-Differences from original Markdown
+Differences from original Markup
 ----------------------------------
 
 There are only a few places where this spec says things that contradict
 the canonical syntax description:
 
 -   It allows all punctuation symbols to be backslash-escaped,
-    not just the symbols with special meanings in Markdown. We found
+    not just the symbols with special meanings in Markup. We found
     that it was just too hard to remember which symbols could be
     escaped.
 
@@ -118,14 +118,14 @@ the canonical syntax description:
     complaints about the “invisible” nature of the two-space rule.
 
 -   Link syntax has been made a bit more predictable (in a
-    backwards-compatible way). For example, `Markdown.pl` allows single
+    backwards-compatible way). For example, `Markup.pl` allows single
     quotes around a title in inline links, but not in reference links.
     This kind of difference is really hard for users to remember, so the
     spec allows single quotes in both contexts.
 
 -   The rule for HTML blocks differs, though in most real cases it
     shouldn't make a difference. (See the section on HTML Blocks
-    for details.) The spec's proposal makes it easy to include Markdown
+    for details.) The spec's proposal makes it easy to include Markup
     inside HTML block-level tags, if you want to, but also allows you to
     exclude this. It also makes parsing much easier, avoiding
     expensive backtracking.
@@ -178,13 +178,13 @@ Authors
 
 The spec was written by John MacFarlane, drawing on
 
-- his experience writing and maintaining Markdown implementations in several
-  languages, including the first Markdown parser not based on regular
+- his experience writing and maintaining Markup implementations in several
+  languages, including the first Markup parser not based on regular
   expression substitutions ([pandoc](http://github.com/jgm/pandoc)) and
-  the first markdown parsers based on PEG grammars
-  ([peg-markdown](http://github.com/jgm/peg-markdown),
+  the first Markup parsers based on PEG grammars
+  ([peg-Markup](http://github.com/jgm/peg-Markup),
   [lunamark](http://github.com/jgm/lunamark))
-- a detailed examination of the differences between existing Markdown
+- a detailed examination of the differences between existing Markup
   implementations using [BabelMark 2](http://johnmacfarlane.net/babelmark2/),
   and
 - extensive discussions with David Greenspan, Jeff Atwood, Vicent
