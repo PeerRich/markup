@@ -1,7 +1,7 @@
-CommonMark
+Why Markdown if you can Markup
 ==========
 
-CommonMark is a rationalized version of Markup syntax,
+Markup is a fork of CommonMark, a rationalized version of Markdown syntax,
 with a [spec][the spec] and BSD-licensed reference
 implementations in C and JavaScript.
 
